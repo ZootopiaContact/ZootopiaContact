@@ -17,6 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
         android:layout_width="0dp"
@@ -40,5 +41,7 @@
 
 
     </com.google.android.material.tabs.TabLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
