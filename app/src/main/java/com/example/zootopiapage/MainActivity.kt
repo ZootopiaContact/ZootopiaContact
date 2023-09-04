@@ -22,5 +22,5 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewpager.adapter = adapter
         binding.tablayout.setupWithViewPager(binding.viewpager)
-    }//커밋 하려고 만든 주석
+    }
 }
