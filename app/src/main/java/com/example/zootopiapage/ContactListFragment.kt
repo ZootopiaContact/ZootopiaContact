@@ -14,6 +14,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class ContactListFragment : Fragment() {
+
     private var param1: String? = null
     private var param2: String? = null
     private var _binding: FragmentContactListBinding? = null
@@ -24,6 +25,8 @@ class ContactListFragment : Fragment() {
 //            layoutManager = LinearLayoutManager(context)
 //        }
 //    }
+
+
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +47,6 @@ class ContactListFragment : Fragment() {
         recyclerView.adapter = ContactAdapter(ZootopiaData.get())
         return binding.root
     }
-
     companion object {
         fun newInstance(param1: String, param2: String) =
             ContactListFragment().apply {
