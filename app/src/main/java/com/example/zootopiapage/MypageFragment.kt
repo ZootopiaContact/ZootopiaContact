@@ -6,12 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-
 class contact : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -32,6 +31,7 @@ class contact : Fragment() {
 
     companion object {
         @JvmStatic
+
         fun newInstance(param1: String, param2: String) =
             contact().apply {
                 arguments = Bundle().apply {
