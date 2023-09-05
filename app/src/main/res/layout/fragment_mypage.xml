@@ -13,29 +13,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circle_my_iv"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:background="@android:color/transparent"
-        android:src="@drawable/apple"
-        app:civ_border_color="@color/white"
-        app:civ_border_overlay="true"
-        app:civ_border_width="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_my_iv"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/piter"
+            app:civ_border_color="@color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.12" />
 
     <TextView
         android:id="@+id/name_my_text"
         android:layout_width="169dp"
         android:layout_height="60dp"
         android:gravity="center"
-        android:text="애플"
+        android:text="피터"
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -46,20 +46,6 @@
         app:layout_constraintVertical_bias="0.21" />
 
 
-    <TextView
-        android:id="@+id/brith_my_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="생일: 4월 5일"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/con_my_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_my_text"
-        app:layout_constraintVertical_bias="0.204" />
 
     <TextView
         android:id="@+id/con_my_text"
@@ -120,20 +106,21 @@
         app:layout_constraintTop_toBottomOf="@+id/contact_my_text"
         app:layout_constraintVertical_bias="0.131" />
 
-    <TextView
-        android:id="@+id/email_my_text"
-        android:layout_width="341dp"
-        android:layout_height="61dp"
-        android:background="@drawable/backgroundbottom"
-        android:gravity="center_vertical"
-        android:paddingLeft="60dp"
-        android:text="apple@apple.com"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/em_my_text" />
+        <TextView
+            android:id="@+id/email_my_text"
+            android:layout_width="341dp"
+            android:layout_height="61dp"
+            android:background="@drawable/backgroundbottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="60dp"
+            android:text="apple@apple.com"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/em_my_text" />
 
     <ImageView
         android:id="@+id/email_my_iv"
@@ -147,39 +134,6 @@
         app:layout_constraintStart_toStartOf="@+id/email_my_text"
         app:layout_constraintTop_toBottomOf="@+id/em_my_text"
         app:layout_constraintVertical_bias="0.444" />
-
-
-    <TextView
-        android:id="@+id/lk_my_text"
-        android:layout_width="341dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/backgroundtop"
-        android:gravity="center_vertical"
-        android:paddingLeft="10dp"
-        android:text="좋아하는 말"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_my_text" />
-
-    <TextView
-        android:id="@+id/like_my_text"
-        android:layout_width="341dp"
-        android:layout_height="61dp"
-        android:background="@drawable/backgroundbottom"
-        android:gravity="center_vertical"
-        android:paddingLeft="60dp"
-        android:text="사슴 일은 아무도 모른다!"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lk_my_text" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
