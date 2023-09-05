@@ -9,8 +9,6 @@ object Constants {
             "애플",
             "9월 24일",
             "010-0000-0924",
-            "사람들은 닮기 마련",
-            "놀이"
         )
         zootopiaList.add(data1)
         val data2 = ZootopiaInfo(
