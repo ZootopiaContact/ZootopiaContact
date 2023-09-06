@@ -21,5 +21,8 @@ class ViewPager2Adapter(fragmentActivity: FragmentActivity) : FragmentStateAdapt
         fragments.add(fragment)
         notifyItemInserted(fragments.size - 1)
     }
+    fun getFragment(position: Int): Fragment {
+        return fragments[position]
+    }
 
 }

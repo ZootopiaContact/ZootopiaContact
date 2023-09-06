@@ -20,11 +20,6 @@ class ContactListFragment : Fragment() {
     private var _binding: FragmentContactListBinding? = null
     private var buttonBinding : ContactListBinding? = null
     private val binding get() = _binding!!
-//    private val recyclerView by lazy {
-//        binding.contactRecyclerview.apply {
-//            layoutManager = LinearLayoutManager(context)
-//        }
-//    }
 
 
     private lateinit var recyclerView: RecyclerView
@@ -36,6 +31,11 @@ class ContactListFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    fun addItem(item: ZootopiaInfo) {
+        val adapter = recyclerView.adapter as ContactAdapter
+        adapter.items.add(item)
+        adapter.notifyItemInserted(adapter.items.size - 1)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +46,7 @@ class ContactListFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = ContactAdapter(ZootopiaData.get())
         return binding.root
+
     }
     companion object {
         fun newInstance(param1: String, param2: String) =
