@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circle_my_iv"
@@ -16,7 +16,7 @@
             android:layout_height="300dp"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:src="@drawable/piter"
+            android:src="@drawable/marti"
             app:civ_border_color="@color/white"
             app:civ_border_overlay="true"
             app:civ_border_width="5dp"
@@ -32,10 +32,12 @@
             android:layout_width="169dp"
             android:layout_height="60dp"
             android:gravity="center"
-            android:text="피터"
-            android:textSize="40sp"
+            android:text="마티"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/brown"
+            android:background="@drawable/name_shape"
+            android:fontFamily="@font/zootopiafont"
             app:layout_constraintBottom_toTopOf="@+id/con_my_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +54,7 @@
             android:gravity="center_vertical"
             android:paddingLeft="10dp"
             android:text="연락처 정보"
+            android:fontFamily="@font/zootopiafont"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -111,6 +114,7 @@
             android:gravity="center_vertical"
             android:paddingLeft="60dp"
             android:text="apple@apple.com"
+            android:fontFamily="@font/zootopiafont"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"

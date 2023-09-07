@@ -3,7 +3,6 @@ package com.example.zootopiapage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.zootopiapage.databinding.ActivityMainBinding
-import com.example.zootopiapage.databinding.DialogAddItemBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
@@ -21,11 +20,6 @@ class MainActivity : AppCompatActivity() {
         viewPager2Adapter.addFragment(ContactDetailFragment())
 
         initViewPager()
-
-        binding.addListBtn.setOnClickListener {
-            val contactListFragment = viewPager2Adapter.getFragment(0) as? ContactListFragment
-            contactListFragment?.addItemDialog()
-        }
     }
 
     private fun initViewPager() {

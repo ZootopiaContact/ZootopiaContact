@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.zootopiapage.databinding.DialogAddItemBinding
 import com.example.zootopiapage.databinding.FragmentContactListBinding
 
 private const val ARG_PARAM1 = "param1"
@@ -51,27 +50,6 @@ class ContactListFragment : Fragment() {
         return binding.root
     }
 
-    fun addItemDialog() {
-        val dialogBinding = DialogAddItemBinding.inflate(layoutInflater)
-
-        val dialog = AlertDialog.Builder(requireContext())
-            .setTitle("연락처 추가")
-            .setView(dialogBinding.root)
-            .setPositiveButton("추가") { _, _ ->
-                val name = dialogBinding.nameDialogEdit.text.toString()
-                val call = dialogBinding.phoneDialogEdit.text.toString()
-                val email = dialogBinding.emailDialogEdit.text.toString()
-
-                val addItem = ZootopiaInfo( R.drawable.apple,name, call, email)
-
-                // ContactAdapter 내에서 addItem 함수를 호출하여 아이템 추가
-                adapter.addItem(addItem)
-            }
-            .setNegativeButton("취소", null)
-            .create()
-
-        dialog.show()
-    }
 
     companion object {
         fun newInstance(param1: String, param2: String) =
