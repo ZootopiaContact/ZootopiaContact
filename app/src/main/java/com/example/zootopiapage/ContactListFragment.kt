@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.zootopiapage.databinding.FragmentContactListBinding
-import com.example.zootopiapage.databinding.GridContactListBinding
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -33,8 +32,8 @@ class ContactListFragment : Fragment() {
     }
     fun addItem(item: ZootopiaInfo) {
         val adapter = recyclerView.adapter as ContactAdapter
-        adapter.items.add(item)
-        adapter.notifyItemInserted(adapter.items.size - 1)
+        adapter.zootopiaList.add(item)
+        adapter.notifyItemInserted(adapter.zootopiaList.size - 1)
     }
 
     override fun onCreateView(
@@ -43,8 +42,18 @@ class ContactListFragment : Fragment() {
     ): View {
         _binding = FragmentContactListBinding.inflate(inflater, container, false)
         recyclerView = binding.contactRecyclerview
-        recyclerView.layoutManager = GridLayoutManager(context, 4)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+//        recyclerView.layoutManager = GridLayoutManager(context, 4)
         recyclerView.adapter = ContactAdapter(ZootopiaData.get())
+
+        binding.addListBtn.setOnClickListener{
+            val dialogFragment = DialogAddItemFragment()
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(android.R.id.content, dialogFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
         return binding.root
 
     }
