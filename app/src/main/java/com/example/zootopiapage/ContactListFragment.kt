@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.zootopiapage.databinding.FragmentContactListBinding
-import com.example.zootopiapage.databinding.GridContactListBinding
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -43,7 +42,8 @@ class ContactListFragment : Fragment() {
     ): View {
         _binding = FragmentContactListBinding.inflate(inflater, container, false)
         recyclerView = binding.contactRecyclerview
-        recyclerView.layoutManager = GridLayoutManager(context, 4)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+//        recyclerView.layoutManager = GridLayoutManager(context, 4)
         recyclerView.adapter = ContactAdapter(ZootopiaData.get())
 
         binding.addListBtn.setOnClickListener{
