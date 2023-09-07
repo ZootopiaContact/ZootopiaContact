@@ -35,42 +35,42 @@ object ZootopiaData {
         val data5 = ZootopiaInfo(
             R.drawable.jjuni,
             "쭈니",
-            "9월 29일",
+            "010-0000-0929",
             "jjuni@zootopia.com"
         )
         zootopiaList.add(data5)
         val data6 = ZootopiaInfo(
             R.drawable.jackson,
             "잭슨",
-            "10월 1일",
+            "010-0000-1001",
             "jackson@zootopia.com"
         )
         zootopiaList.add(data6)
         val data7 = ZootopiaInfo(
             R.drawable.judy,
             "미애",
-            "3월 10일",
+            "010-0000-0310",
             "judy@zootopia.com"
         )
         zootopiaList.add(data7)
         val data8 = ZootopiaInfo(
             R.drawable.michel,
             "미첼",
-            "5월 19일",
+            "010-0000-0519",
             "michel@zootopia.com"
         )
         zootopiaList.add(data8)
         val data9 = ZootopiaInfo(
             R.drawable.yobi,
             "요비",
-            "10월 31일",
+            "010-0000-1031",
             "yobi@zootopia.com"
         )
         zootopiaList.add(data9)
         val data10 = ZootopiaInfo(
             R.drawable.pach,
             "패치",
-            "2월 10일",
+            "010-0000-0210",
             "pach@zootopia.com"
         )
         zootopiaList.add(data10)
