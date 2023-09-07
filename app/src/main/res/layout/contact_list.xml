@@ -19,7 +19,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/profile_background"
-        android:src="@drawable/marti"
+        android:src="@drawable/piter"
         android:layout_marginStart="20dp"
         app:layout_constraintTop_toTopOf="@id/contact_view"
         app:layout_constraintStart_toStartOf="@id/contact_view"
@@ -31,14 +31,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:text="마티"
-        android:fontFamily="@font/zootopiafont"
+        android:text="이름"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/contact_image"
         app:layout_constraintTop_toTopOf="@id/contact_image"
         app:layout_constraintBottom_toBottomOf="@id/contact_image"
         />
+
 
     <CheckBox
         android:id="@+id/empty_heart_image"
