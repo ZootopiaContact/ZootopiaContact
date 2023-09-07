@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.zootopiapage.databinding.ContactListBinding
 import com.example.zootopiapage.databinding.GridContactListBinding
 
-class ContactAdapter(private val zootopiaList : MutableList<ZootopiaInfo>) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+class ContactAdapter( val zootopiaList : MutableList<ZootopiaInfo>) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     companion object {
         const val VIEW_TYPE_LIST = 1
