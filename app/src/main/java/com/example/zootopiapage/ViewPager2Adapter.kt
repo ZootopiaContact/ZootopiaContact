@@ -12,11 +12,9 @@ class ViewPager2Adapter(fragmentActivity: FragmentActivity) :
     override fun getItemCount(): Int {
         return fragments.size
     }
-
     override fun createFragment(position: Int): Fragment {
         return fragments[position]
     }
-
     fun addFragment(fragment: Fragment) {
         fragments.add(fragment)
         notifyDataSetChanged()
