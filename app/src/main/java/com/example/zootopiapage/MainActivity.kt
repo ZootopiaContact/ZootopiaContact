@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         viewPager2Adapter.addFragment(ContactDetailFragment())
 
         initViewPager()
-
     }
 
 
