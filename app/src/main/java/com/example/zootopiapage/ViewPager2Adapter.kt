@@ -7,7 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 class ViewPager2Adapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {
 
-    private val fragments: MutableList<Fragment> = mutableListOf()
+    private val fragments: ArrayList<Fragment> = ArrayList()
 
     override fun getItemCount(): Int {
         return fragments.size
@@ -22,7 +22,6 @@ class ViewPager2Adapter(fragmentActivity: FragmentActivity) :
         notifyDataSetChanged()
     }
 
-    // 추가: 프래그먼트 액세스를 위한 메서드
     fun getFragment(position: Int): Fragment? {
         if (position in 0 until fragments.size) {
             return fragments[position]
@@ -30,5 +29,3 @@ class ViewPager2Adapter(fragmentActivity: FragmentActivity) :
         return null
     }
 }
-
-

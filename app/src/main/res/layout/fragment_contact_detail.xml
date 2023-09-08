@@ -10,22 +10,23 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/detail_img"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:src="@drawable/marti"
             app:civ_border_color="@color/white"
             app:civ_border_overlay="true"
             app:civ_border_width="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.12" />
+            android:layout_marginTop="16dp" />
+
         <TextView
             android:id="@+id/detail_name"
             android:layout_width="169dp"
@@ -35,77 +36,98 @@
             android:textSize="40sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/con_my_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintVertical_bias="0.21" />
 
+        <Button
+            android:id="@+id/detail_message"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="MESSAGE"
+            app:layout_constraintEnd_toStartOf="@+id/detail_call"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_name" />
 
+        <Button
+            android:id="@+id/detail_call"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="CALL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.808"
+            app:layout_constraintStart_toStartOf="@+id/detail_message"
+            app:layout_constraintTop_toBottomOf="@+id/detail_name" />
 
         <TextView
             android:id="@+id/con_my_text"
-            android:layout_width="341dp"
-            android:layout_height="38dp"
+            android:layout_width="290dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/backgroundtop"
             android:gravity="center_vertical"
             android:paddingLeft="10dp"
             android:text="연락처 정보"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_call"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_img"
-            app:layout_constraintVertical_bias="0.304" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/detail_number"
-            android:layout_width="341dp"
-            android:layout_height="61dp"
+            android:layout_width="290dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/backgroundbottom"
             android:gravity="center_vertical"
             android:paddingLeft="60dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:text="010-0000-0000"
+            android:textColor="@color/black"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/con_my_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/con_my_text" />
+            app:layout_constraintEnd_toEndOf="parent" />
+
 
         <ImageView
             android:id="@+id/call_my_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:src="@drawable/phoneicon"
-            app:layout_constraintBottom_toBottomOf="@+id/detail_number"
             app:layout_constraintEnd_toEndOf="@+id/detail_number"
-            app:layout_constraintHorizontal_bias="0.046"
-            app:layout_constraintStart_toStartOf="@+id/detail_number"
-            app:layout_constraintTop_toBottomOf="@+id/con_my_text"
-            app:layout_constraintVertical_bias="0.444" />
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/con_my_text" />
 
         <TextView
             android:id="@+id/em_my_text"
-            android:layout_width="341dp"
-            android:layout_height="38dp"
+            android:layout_width="290dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/backgroundtop"
             android:gravity="center_vertical"
             android:paddingLeft="10dp"
             android:text="이메일"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_number"
-            app:layout_constraintVertical_bias="0.131" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/detail_email"
-            android:layout_width="341dp"
-            android:layout_height="61dp"
+            android:layout_width="290dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/backgroundbottom"
             android:gravity="center_vertical"
             android:paddingLeft="60dp"
@@ -113,23 +135,19 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/em_my_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/em_my_text" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
             android:id="@+id/email_my_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/mailicon"
-            app:layout_constraintBottom_toBottomOf="@+id/detail_email"
-            app:layout_constraintEnd_toEndOf="@+id/detail_email"
-            app:layout_constraintHorizontal_bias="0.045"
-            app:layout_constraintStart_toStartOf="@+id/detail_email"
-            app:layout_constraintTop_toBottomOf="@+id/em_my_text"
-            app:layout_constraintVertical_bias="0.444" />
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.042"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/em_my_text" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
