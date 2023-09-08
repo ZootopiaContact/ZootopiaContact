@@ -10,11 +10,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <View
             android:id="@+id/appbar"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="@color/main"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +22,9 @@
             />
 
         <ImageView
+            android:id="@+id/logo"
             android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:src="@drawable/logo_icon"
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"

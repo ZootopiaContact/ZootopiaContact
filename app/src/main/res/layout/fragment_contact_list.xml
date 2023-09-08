@@ -7,13 +7,47 @@
     tools:context=".ContactListFragment">
 
     <View
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/main"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:src="@drawable/logo_icon"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/appbar"
+        />
+
+    <ImageButton
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/leaf"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/my_profile_view"
+        app:layout_constraintTop_toTopOf="@id/appbar"
+        />
+
+    <View
         android:id="@+id/my_profile_view"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#FFFAE6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
         />
 
     <TextView
