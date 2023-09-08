@@ -35,7 +35,6 @@ class ContactAdapter(
         notifyItemInserted(zootopiaList.size - 1)
     }
 
-
     //contactListFragment clickListener
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = zootopiaList[position]
@@ -44,8 +43,6 @@ class ContactAdapter(
             itemClickListener(position)
         }
     }
-
-
 
     override fun getItemCount(): Int {
         return zootopiaList.size

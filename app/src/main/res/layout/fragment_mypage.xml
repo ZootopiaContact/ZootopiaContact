@@ -16,7 +16,7 @@
             android:layout_height="300dp"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:src="@drawable/piter"
+            android:src="@drawable/marti"
             app:civ_border_color="@color/white"
             app:civ_border_overlay="true"
             app:civ_border_width="5dp"
@@ -30,107 +30,75 @@
         <TextView
             android:id="@+id/name_my_text"
             android:layout_width="169dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/zootopiafont"
+            android:background="@drawable/name_shape"
             android:gravity="center"
-            android:text="피터"
-            android:textSize="40sp"
+            android:text="마티"
+            android:textColor="@color/page_name_color"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/con_my_text"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/circle_my_iv"
             app:layout_constraintVertical_bias="0.21" />
 
-
-
-        <TextView
+        <ImageView
             android:id="@+id/con_my_text"
-            android:layout_width="341dp"
-            android:layout_height="38dp"
-            android:background="@drawable/backgroundtop"
-            android:gravity="center_vertical"
-            android:paddingLeft="10dp"
-            android:text="연락처 정보"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="330dp"
+            android:layout_height="120dp"
+            android:src="@drawable/call_background"
+            android:scaleType="fitXY"
+            android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/circle_my_iv"
-            app:layout_constraintVertical_bias="0.304" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_my_text"
+            />
 
         <TextView
             android:id="@+id/contact_my_text"
-            android:layout_width="341dp"
-            android:layout_height="61dp"
-            android:background="@drawable/backgroundbottom"
-            android:gravity="center_vertical"
-            android:paddingLeft="60dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:text="010-0000-0405"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/con_my_text" />
-
-        <ImageView
-            android:id="@+id/call_my_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/phoneicon"
-            app:layout_constraintBottom_toBottomOf="@+id/contact_my_text"
-            app:layout_constraintEnd_toEndOf="@+id/contact_my_text"
-            app:layout_constraintHorizontal_bias="0.046"
-            app:layout_constraintStart_toStartOf="@+id/contact_my_text"
-            app:layout_constraintTop_toBottomOf="@+id/con_my_text"
-            app:layout_constraintVertical_bias="0.444" />
+            android:text="010-0000-0416"
+            android:textColor="@color/brown"
+            android:fontFamily="@font/zootopiafont"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@id/con_my_text"
+            app:layout_constraintEnd_toEndOf="@id/con_my_text"
+            app:layout_constraintTop_toTopOf="@id/con_my_text"
+            app:layout_constraintBottom_toBottomOf="@id/con_my_text"
+            />
 
-        <TextView
+        <ImageView
             android:id="@+id/em_my_text"
-            android:layout_width="341dp"
-            android:layout_height="38dp"
-            android:background="@drawable/backgroundtop"
-            android:gravity="center_vertical"
-            android:paddingLeft="10dp"
-            android:text="이메일"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="330dp"
+            android:layout_height="120dp"
+            android:src="@drawable/email_background"
+            android:scaleType="fitXY"
+            android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contact_my_text"
-            app:layout_constraintVertical_bias="0.131" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/con_my_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
         <TextView
             android:id="@+id/email_my_text"
-            android:layout_width="341dp"
-            android:layout_height="61dp"
-            android:background="@drawable/backgroundbottom"
-            android:gravity="center_vertical"
-            android:paddingLeft="60dp"
-            android:text="apple@apple.com"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/em_my_text" />
-
-        <ImageView
-            android:id="@+id/email_my_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:src="@drawable/mailicon"
-            app:layout_constraintBottom_toBottomOf="@+id/email_my_text"
-            app:layout_constraintEnd_toEndOf="@+id/email_my_text"
-            app:layout_constraintHorizontal_bias="0.045"
-            app:layout_constraintStart_toStartOf="@+id/email_my_text"
-            app:layout_constraintTop_toBottomOf="@+id/em_my_text"
-            app:layout_constraintVertical_bias="0.444" />
+            android:text="marty@zootopia.com"
+            android:textColor="@color/brown"
+            android:fontFamily="@font/zootopiafont"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@id/em_my_text"
+            app:layout_constraintEnd_toEndOf="@id/em_my_text"
+            app:layout_constraintTop_toTopOf="@id/em_my_text"
+            app:layout_constraintBottom_toBottomOf="@id/em_my_text"
+            />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
