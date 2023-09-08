@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.zootopiapage.databinding.ContactListBinding
 import com.example.zootopiapage.databinding.GridContactListBinding
 
-class ContactAdapter(val zootopiaList : MutableList<ZootopiaInfo>) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+class ContactAdapter(
+    internal val zootopiaList : MutableList<ZootopiaInfo>,
+    private val itemClickListener: (position: Int) -> Unit)
+    : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     companion object {
         const val VIEW_TYPE_LIST = 1
@@ -27,10 +30,18 @@ class ContactAdapter(val zootopiaList : MutableList<ZootopiaInfo>) : RecyclerVie
             ViewHolder(binding.root)
         }
     }
+    fun addItem(item: ZootopiaInfo) {
+        zootopiaList.add(item)
+        notifyItemInserted(zootopiaList.size - 1)
+    }
 
+    //contactListFragment clickListener
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = zootopiaList[position]
         holder.bind(item)
+        holder.itemView.setOnClickListener{
+            itemClickListener(position)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -38,12 +49,12 @@ class ContactAdapter(val zootopiaList : MutableList<ZootopiaInfo>) : RecyclerVie
     }
 
     override fun getItemViewType(position: Int): Int {
-        return VIEW_TYPE_LIST
+        return VIEW_TYPE_GRID
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: ZootopiaInfo) {
-            contactImage.setImageResource(item.profile)
+            contactImage.setImageResource(item.profileImageResourceId)
             name.text = item.name
         }
         val contactImage = itemView.findViewById<ImageView>(R.id.contact_image)
