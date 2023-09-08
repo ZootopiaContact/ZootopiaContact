@@ -47,8 +47,6 @@ class ContactListFragment : Fragment(), OnItemAddedListener {
             // MainActivity의 아이템 클릭 이벤트 메서드 호출
             (requireActivity() as MainActivity).onRecyclerViewItemClick(position, clickedItem)
         }
-
-
         binding.addListBtn.setOnClickListener {
             val dialogFragment = DialogAddItemFragment()
             dialogFragment.show(childFragmentManager, "ContactListFragment")

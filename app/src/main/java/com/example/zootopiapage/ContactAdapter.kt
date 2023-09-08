@@ -10,9 +10,9 @@ import com.example.zootopiapage.databinding.ContactListBinding
 import com.example.zootopiapage.databinding.GridContactListBinding
 
 class ContactAdapter(
-    internal val zootopiaList : MutableList<ZootopiaInfo>,
-    private val itemClickListener: (position: Int) -> Unit)
-    : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+    internal val zootopiaList: MutableList<ZootopiaInfo>,
+    private val itemClickListener: (position: Int) -> Unit
+) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     companion object {
         const val VIEW_TYPE_LIST = 1
@@ -34,6 +34,9 @@ class ContactAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = zootopiaList[position]
         holder.bind(item)
+        holder.itemView.setOnClickListener {
+            itemClickListener(position)
+        }
     }
 
     override fun getItemCount(): Int {

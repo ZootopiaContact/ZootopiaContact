@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         viewPager2Adapter = ViewPager2Adapter(this)
         viewPager2Adapter.addFragment(ContactListFragment.newInstance("param1", "param2"))
         viewPager2Adapter.addFragment(MypageFragment())
-        viewPager2Adapter.addFragment(ContactDetailFragment())
 
         initViewPager()
 
@@ -40,7 +39,6 @@ class MainActivity : AppCompatActivity() {
             when (position) {
                 0 -> tab.text = "연락처"
                 1 -> tab.text = "마이 페이지"
-                2 -> tab.text = "Tab3"
             }
         }.attach()
 
