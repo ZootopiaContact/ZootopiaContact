@@ -9,25 +9,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/add_dialog_img"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="#80DEEA"
-            android:src="@drawable/apple"
-            app:civ_border_color="@color/black"
-            app:civ_border_width="1dp"
+            android:src="@drawable/panta"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/name_dialog_layout"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name_dialog_layout"
             style="@style/Widget.Design.TextInputLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="40dp"
             android:hint="이름(두글자 이상)"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -95,6 +95,7 @@
             android:layout_marginBottom="32dp"
             android:backgroundTint="#FFD54F"
             android:text="취소"
+            android:fontFamily="@font/zootopiafont"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -107,6 +108,7 @@
             android:layout_marginEnd="32dp"
             android:backgroundTint="#FFD54F"
             android:text="확인"
+            android:fontFamily="@font/zootopiafont"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

@@ -10,22 +10,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <View
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/main"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:src="@drawable/logo_icon"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/appbar"
+            />
+
+        <ImageView
             android:id="@+id/circle_my_iv"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:src="@drawable/marti"
-            app:civ_border_color="@color/white"
-            app:civ_border_overlay="true"
-            app:civ_border_width="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="40dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.12" />
+            app:layout_constraintTop_toBottomOf="@id/appbar"
+            app:layout_constraintBottom_toTopOf="@id/name_my_text"
+            />
 
         <TextView
             android:id="@+id/name_my_text"
@@ -35,14 +54,14 @@
             android:background="@drawable/name_shape"
             android:gravity="center"
             android:text="마티"
-            android:textColor="@color/page_name_color"
+            android:textColor="@color/brown"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/circle_my_iv"
-            app:layout_constraintVertical_bias="0.21" />
+            />
 
         <ImageView
             android:id="@+id/con_my_text"
