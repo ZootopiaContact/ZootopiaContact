@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         initViewPager()
 
-
     }
 
     private fun initViewPager() {
@@ -41,7 +40,6 @@ class MainActivity : AppCompatActivity() {
             when (position) {
                 0 -> tab.text = "연락처"
                 1 -> tab.text = "마이 페이지"
-                2 -> tab.text = "Tab3"
             }
         }.attach()
     }
