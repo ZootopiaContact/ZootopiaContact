@@ -17,12 +17,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initViewPager()
-
-
     }
 
     private fun initViewPager() {
-
         var viewPager2Adatper = ViewPager2Adapter(this)
         viewPager2Adatper.addFragment(ContactListFragment())
         viewPager2Adatper.addFragment(MypageFragment())
@@ -30,18 +27,12 @@ class MainActivity : AppCompatActivity() {
         binding.viewpager.apply {
             adapter = viewPager2Adatper
 
-            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
-                }
-            })
         }
         TabLayoutMediator(binding.tablayout, binding.viewpager) { tab, position ->
             Log.e("YMC", "ViewPager position: ${position}")
             when (position) {
                 0 -> tab.text = "연락처"
                 1 -> tab.text = "마이 페이지"
-                2 -> tab.text = "Tab3"
             }
         }.attach()
     }

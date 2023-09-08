@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.zootopiapage.databinding.ContactListBinding
 import com.example.zootopiapage.databinding.GridContactListBinding
 
-class ContactAdapter(val zootopiaList : MutableList<ZootopiaInfo>) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+class ContactAdapter(val zootopiaList: MutableList<ZootopiaInfo>) :
+    RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     companion object {
         const val VIEW_TYPE_LIST = 1
-        const val VIEW_TYPE_GRID = 2
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,12 +41,18 @@ class ContactAdapter(val zootopiaList : MutableList<ZootopiaInfo>) : RecyclerVie
         return VIEW_TYPE_LIST
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    fun addContact(contact: ZootopiaInfo) {
+        zootopiaList.add(contact)
+    }
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val contactImage = itemView.findViewById<ImageView>(R.id.contact_image)
+        val name = itemView.findViewById<TextView>(R.id.contact_name_text)
+
         fun bind(item: ZootopiaInfo) {
             contactImage.setImageResource(item.profile)
             name.text = item.name
         }
-        val contactImage = itemView.findViewById<ImageView>(R.id.contact_image)
-        val name = itemView.findViewById<TextView>(R.id.contact_name_text)
     }
 }
+
