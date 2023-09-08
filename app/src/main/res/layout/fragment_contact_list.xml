@@ -98,10 +98,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#80CBC4"
+        android:backgroundTint="@color/brown"
         android:clickable="true"
+        android:foreground="@drawable/floating_img"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/floating_img" />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
