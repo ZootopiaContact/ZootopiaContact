@@ -30,7 +30,6 @@ class ContactAdapter(
         }
     }
 
-    //contactListFragment clickListener
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = zootopiaList[position]
         holder.bind(item)
