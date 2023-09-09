@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         viewPager2Adapter.addFragment(ContactDetailFragment())
 
         initViewPager()
+
+
     }
 
 
@@ -32,9 +34,7 @@ class MainActivity : AppCompatActivity() {
         viewPager2Adatper.addFragment(MypageFragment())
         binding.viewpager.apply {
             adapter = viewPager2Adapter
->>>>>>>>> Temporary merge branch 2
         }
-
         TabLayoutMediator(binding.tablayout, binding.viewpager) { tab, position ->
             Log.e("YMC", "ViewPager position: ${position}")
             when (position) {
@@ -43,12 +43,6 @@ class MainActivity : AppCompatActivity() {
             }
         }.attach()
 
-        /*registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-            }
-        })
-    }*/
 
     }
 
