@@ -3,7 +3,7 @@ package com.example.zootopiapage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.viewpager2.widget.ViewPager2
+import android.view.View
 import com.example.zootopiapage.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
     private fun initViewPager() {
 
         var viewPager2Adatper = ViewPager2Adapter(this)
@@ -40,16 +41,9 @@ class MainActivity : AppCompatActivity() {
             when (position) {
                 0 -> tab.text = "연락처"
                 1 -> tab.text = "마이 페이지"
+                else -> tab.view.visibility = View.GONE
             }
         }.attach()
-
-        /*registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-            }
-        })
-    }*/
-
     }
 
     fun onRecyclerViewItemClick(position: Int, contactData: ZootopiaInfo) {
