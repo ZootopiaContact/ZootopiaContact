@@ -16,7 +16,6 @@ class ContactAdapter(
 
     companion object {
         const val VIEW_TYPE_LIST = 1
-        const val VIEW_TYPE_GRID = 2
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,6 +30,7 @@ class ContactAdapter(
         }
     }
 
+    //contactListFragment clickListener
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = zootopiaList[position]
         holder.bind(item)

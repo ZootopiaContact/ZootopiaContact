@@ -2,6 +2,7 @@ package com.example.zootopiapage
 
 import DialogAddItemFragment
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -41,7 +42,7 @@ class ContactListFragment : Fragment(), OnItemAddedListener {
         _binding = FragmentContactListBinding.inflate(inflater, container, false)
         recyclerView = binding.contactRecyclerview
         recyclerView.layoutManager = LinearLayoutManager(context)
-        // 아이템 클릭시 실행 코드
+
         recyclerView.adapter = ContactAdapter(ZootopiaData.get()) { position ->
             val clickedItem = ZootopiaData.get()[position]
             // MainActivity의 아이템 클릭 이벤트 메서드 호출
@@ -51,9 +52,7 @@ class ContactListFragment : Fragment(), OnItemAddedListener {
             val dialogFragment = DialogAddItemFragment()
             dialogFragment.show(childFragmentManager, "ContactListFragment")
         }
-
         return binding.root
-
     }
 
     override fun onItemAdded(item: ZootopiaInfo) {
@@ -65,7 +64,6 @@ class ContactListFragment : Fragment(), OnItemAddedListener {
         adapter.addContact(item)
         adapter.notifyItemInserted(adapter.itemCount - 1)
     }
-
     companion object {
         fun newInstance(param1: String, param2: String) =
             ContactListFragment().apply {

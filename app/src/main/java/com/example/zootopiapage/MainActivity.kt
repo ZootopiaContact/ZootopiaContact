@@ -27,8 +27,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViewPager() {
 
+        var viewPager2Adatper = ViewPager2Adapter(this)
+        viewPager2Adatper.addFragment(ContactListFragment())
+        viewPager2Adatper.addFragment(MypageFragment())
         binding.viewpager.apply {
             adapter = viewPager2Adapter
+>>>>>>>>> Temporary merge branch 2
         }
 
         TabLayoutMediator(binding.tablayout, binding.viewpager) { tab, position ->
