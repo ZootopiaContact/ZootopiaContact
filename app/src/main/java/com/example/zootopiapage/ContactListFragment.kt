@@ -1,12 +1,11 @@
 package com.example.zootopiapage
 
-import DialogAddItemFragment
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -49,7 +48,7 @@ class ContactListFragment : Fragment(), OnItemAddedListener {
             (requireActivity() as MainActivity).onRecyclerViewItemClick(position, clickedItem)
         }
         binding.addListBtn.setOnClickListener {
-            val dialogFragment = DialogAddItemFragment()
+            val dialogFragment = DialogFragment()
             dialogFragment.show(childFragmentManager, "ContactListFragment")
         }
         return binding.root
