@@ -16,7 +16,6 @@ class ContactAdapter(
 
     companion object {
         const val VIEW_TYPE_LIST = 1
-        const val VIEW_TYPE_GRID = 2
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
